@@ -1,0 +1,123 @@
+h1 {
+	color:black;
+}
+
+#links {
+   background-color:#d1d1d1;
+   width: 100%;
+   text-align:center;
+   border-bottom:3px solid #06007a;
+   border-left:3px solid #06007a;
+   border-right:3px solid #06007a;
+}
+
+li {
+	list-style: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.formatBody {
+	margin-top:210px;
+}
+
+header {
+    width: 100%;
+    background-color: #ddda27;
+    background-size: cover;
+    color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    margn-left: 50px;
+    border: 3px solid black;
+}
+
+
+footer {
+	background-color:#e02b0b;
+	text-align: center;
+	margin: 0;
+    padding: 0;
+}
+
+
+#laforge {
+	width: 15%;
+}
+
+#logo {
+	float: left;
+	width: 10%;
+	padding-right: 30px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 30px;
+}
+
+.shipImage {
+	width: 40%;
+	float: left;
+}
+
+.planetImage {
+	width: 40%;
+	float: left;
+}
+
+.shipInfo {
+	margin-left:30px;
+	display:inline-block;
+	vertical-align:top;
+	width: 60%;
+}
+.travelInfo {
+	margin-left:80px;
+	display:inline;
+	vertical-align:top;
+	width: 100%;
+}
+
+.homePageShips {
+	min-height:300px;
+	margin:15px;
+	bottom:0;
+	border-bottom: 2px solid black;
+	
+}
+#comparer {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+.selections {
+	padding: 40px;
+	margin-left:10px;
+	margin-top:90px;
+	bottom: 0;
+	
+	
+}
+.logoTitle {
+	background-color: #ddda27;
+}
+
+#addShip {
+	margin-top:50px;
+}
+#nameId {
+	
+}
+
+#shipSelect {
+	
+}
