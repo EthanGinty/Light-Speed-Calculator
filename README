@@ -1,0 +1,13 @@
+Light Speed Calculator by Ethan Ginty
+
+The purpose of this project was to practice my coding skills on my own to create a usable web app that showcases my knowledge of full stack 
+web development.
+
+SET-UP: 
+  All you need to do to use this application is to first import the package into eclipse. Then, use terminal to cd into the database folder and 
+  run create-myproject2-db.sh. After this everything should work as intended when you run the app in eclipse.
+
+HOW TO PLAY:
+  Click on the button of which ships you want to race against each other and then select the destination from the drop down selector at the top.
+   Once you click "Engage" you will be taken to the results page and will see a table ranking each ship from fastest to slowest
+    and the amount of time it took for them to reach the destination.
