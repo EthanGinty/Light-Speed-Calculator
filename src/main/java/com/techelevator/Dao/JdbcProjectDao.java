@@ -33,6 +33,16 @@ public class JdbcProjectDao implements ProjectDao {
 		}
 		return allShips;
 	}
+	@Override
+	public List<Ship> getShipsByFranchise(String franchise) {
+		List<Ship> listOfFranchiseShips = new ArrayList<Ship>();
+		String sqlGetShipsByFranchise = "SELECT * FROM Ship WHERE franchise = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetShipsByFranchise, franchise);
+		while(results.next()) {
+			listOfFranchiseShips.add(mapRowToShip(results));
+		}
+		return listOfFranchiseShips;
+	}
 
 	@Override
 	public List<Planet> getAllPlanets() {
@@ -82,6 +92,7 @@ public class JdbcProjectDao implements ProjectDao {
 		thePlanet.setPlanetId(results.getInt("planetId"));
 		thePlanet.setDistance(results.getFloat("distance"));
 		thePlanet.setPlanet(results.getString("planet"));
+		thePlanet.setPlanetDescription(results.getString("planet_description"));
 		return thePlanet;
 	}
 

@@ -2,10 +2,18 @@ package com.techelevator.model;
 
 public class Planet {
 	
+	
 	private int planetId;
 	private String planet;
+	private String planetDescription;
 	private float distance;
 	
+	public String getPlanetDescription() {
+		return planetDescription;
+	}
+	public void setPlanetDescription(String planetDescription) {
+		this.planetDescription = planetDescription;
+	}
 	public int getPlanetId() {
 		return planetId;
 	}

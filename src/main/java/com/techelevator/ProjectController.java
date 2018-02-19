@@ -1,5 +1,9 @@
 package com.techelevator;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,16 +31,20 @@ public class ProjectController {
 		model.addAttribute("allPlanets", projectDao.getAllPlanets());
 		return "homePage";
 	}
-
+	
 	@RequestMapping(path = { "/results" }, method = RequestMethod.GET)
 	public String getResults(ModelMap model, HttpServletRequest request) {
-		Ship ship = new Ship();
+		String[] theShips = request.getParameter("racingShips").split(", ");
+		List<Ship> racingShips = new ArrayList<Ship>();
+		for(String ship : theShips) {
+			racingShips.add(projectDao.getShipByName(ship));
+		}
+		Collections.sort(racingShips);
+		model.put("racingShips", racingShips);
 		Planet planet = new Planet();
-		ship.setName(request.getParameter("ship"));
-		model.put("ship", projectDao.getShipByName(ship.getName()));
 		planet.setPlanet(request.getParameter("destination"));
 		model.put("planet", projectDao.getPlanetByName(planet.getPlanet()));
 		return "results";
 	}
-
+	
 }

@@ -1,6 +1,6 @@
 package com.techelevator.model;
 
-public class Ship {
+public class Ship implements Comparable<Ship>{
 	
 	private int shipId;
 	private String name;
@@ -38,6 +38,15 @@ public class Ship {
 	public void setFranchise(String franchise) {
 		this.franchise = franchise;
 	}
+	
+	public int compareTo(Ship o) {
+		if(this.getSpeed() < o.getSpeed()) {
+			return 1;
+		} else {
+			return -1;
+		}
+	}
+	
 
 	}
 

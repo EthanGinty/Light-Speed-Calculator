@@ -14,4 +14,5 @@ public interface ProjectDao {
 	Ship getShipByName(String shipName);
 	List<Planet> getAllPlanets();
 	Planet getPlanetByName(String planetName);
+	List<Ship> getShipsByFranchise(String franchise);
 }

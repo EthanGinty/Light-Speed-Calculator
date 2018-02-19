@@ -21,6 +21,7 @@ CREATE TABLE planet (
 	PlanetID serial,
 	Planet VARCHAR(64) NOT NULL,
 	Distance float NOT NULL,
+	Planet_description VARCHAR(450) NOT NULL,
 	PRIMARY KEY (PlanetID)
 );
 
